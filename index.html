@@ -1,19 +1,395 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cotillon Tras Bambalinas</title>
+<html lang="es-ES">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-----SEO----->
 
+        <title>Cotillon Tras Bambalinas - Tienda de Cotillón y Servicios para fiestass</title>
+        <meta name="description" content="Tienda de Cotillón">
+        <meta name="keywords" content="CUMPLEAÑOS, TORTAS, FIESTA, NAVIDAD, NUEVO AÑO, FESTEJAR, CARNAVAL">
 
-</head>
-<body>
+        <!-----css----->
 
-    <div>
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-----iconos----->
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+        <!-----jquery----->
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <!-- jQuery Modal -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+            defer />
+
+        <!-----favicon----->
+
+        <link rel="icon" href="images/logos/favicon.ico" type="image/x-icon">
+
+    </head>
+    <body>
+
+        <!--header--->
+
+        <img class="headerImagen" src="images/ilustraciones/header/header.png" alt="Año Nuevo">
+
+        <header>
+
+            <a href="file:///D:/proyecto/index.html"><img class="headerLogotipo" src="images/logos/logo.svg" alt="Logotipo"></a>
+
+                <nav>
+
+                    <ul class="flexRowBetween">
+                        <a href="html/tienda.html"><li class="blanco animacion_color cursor">Tienda</li></a>
+                            <li class="blanco animacion_color headerIcono">
+                        <a href="html/carrito.html">
+                                <div class="carritoIcono cursor">
+                                    <i class="fas fa-shopping-cart blanco headerIcono"></i>
+                                    <div class="circuloCarrito"></div>
+                                </div>
+                        </a>
+                                <div class="headerCarritoDespegable margenTop4">
         
+                                    <div class="productosCarritoDesplegable">
+        
+                                    </div>
+        
+                                    <hr>
+        
+                                    <p class="margenTop4 totalCarritoDesplegable">Total:</p>
+        
+                                    <a href="html/carrito.html"><button class="margenTop4 botonCarritoDesplegable">Ver carrito</button></a>
+        
+                                </div>
+                            </li>
+                        
+                        <li class="cursor">
+
+                            <div>
+                                <button class="headerBoton principal">
+                                    <i class="fas fa-user margenRight principal headerIcono"></i>
+                                    Iniciar Sesión
+                                </button>
+                            </div> 
+
+                        </li>
+                        
+
+                    </ul>
+
+                </nav>
+
+
+            <div class="headerInformacion">
+                <h1>Celebremos Año Nuevo</h1>
+                <p class="margenTop2">Contamos con ofertas especiales en los productos especiales para poder festejar este nuevo año con las manos bien arriba!</p>
+                <a href="#servicios"><button class="margenTop3">Ver Servicios</button></a>
+            </div>
+
+        </header>
+
+        <!--Eleginos-->
+
+        <section class="contenedor">
+            
+            <div class="flexRowBetween margenTop0">
+
+                <div class="eleginosBloque centrar1 imagen1 centrar">
+
+                    <div>
+                        <img class="icono" src="images/iconos/iconos-34.svg">
+                    </div>
+    
+                    <div>
+                        <h4 class="blanco">Calidad</h4>
+                        <p class="blanco">Trabajamos solo con pro-<br>ductos y marcas de primera calidad reconocidas en el<br>mercado.</p>
+                    </div>
+    
+                </div>
+    
+                
+                <div class="eleginosBloque centrar2 imagen2 centrar">
+    
+                    <div>
+                        <img class="icono" src="images/iconos/iconos-35.svg">
+                    </div>
+    
+                    <div>
+                        <h4 class="blanco">Precio</h4>
+                        <p class="blanco">Contamos con proveedores mayoristas seleccionados<br>para garantizar el mejor<br>costo-beneficio.</p>
+                    </div>
+    
+                </div>
+    
+                
+                <div class="eleginosBloque centrar3 imagen3 centrar">
+    
+                    <div>
+                        <img class="icono" src="images/iconos/iconos-36.svg">
+                    </div>
+    
+                    <div>
+                        <h4 class="blanco">Atención</h4>
+                        <p class="blanco">Te atendemos, asesoramos entendiendo lo importante<br> que son las relaciones interpersonales.</p>
+                    </div>
+    
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--Categorías-->
+
+        <section class="contenedor">
+
+            <h1>Ver Categorías</h1>
+
+            <div class="centrar margenTop flexRowBetween ">
+
+                <div class="flexColumnEvenly categoriasCaja" id="idCaja1">
+                    <div class="centrar">
+                        <img class="icono" src="images/iconos/iconos-16.png" alt="Globos">
+                    </div>
+                    <h4 class="secundario">Globos</h4>
+                </div>
+
+                <div class="flexColumnEvenly categoriasCaja" id="idCaja2">
+                    <div class="centrar">
+                        <img class="icono" src="images/iconos/iconos-17.png" alt="Velas">
+                    </div>
+                    <h4 class="secundario">Velas</h4>
+                </div>
+
+                <div class="flexColumnEvenly categoriasCaja" id="idCaja3">
+                    <div class="centrar">
+                        <img class="icono" src="images/iconos/iconos-18.png" alt="Cubiertos">
+                    </div>
+                    <h4 class="secundario">Cubiertos</h4>
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="serviciosFondo">
+
+            <!--Productos-->
+
+            <section class="contenedor">
+
+                <h1>Más Vendidos</h1>
+
+                <div class="margenTop flexRowBetween" id="productosDestacados">
+
+                </div>
+
+            </section>
+
+            <section class="contenedor" id="servicios">
+                <div>
+                <h1 class="secundario">Servicios</h1>
+
+                <div class="margenTop flexRowBetween">
+
+                    <div class="serviciosCaja centrar flexColumnEvenly serviciosReposteria">
+
+                        <div class="serviciosTitulo" id="serv1">
+
+                            <div class="centrar">
+                                <img class="serviciosIcono" src="images/iconos/iconos-19.svg" alt="Repostería">
+                            </div>
+                                <h4 class="secundario">Repostería</h4>
+
+                        </div>
+
+                        <p class="secundario serviciosDescripcion">Ofrecemos la más amplia variedad de tortas, mesas dulces, desayunos, ambientaciones para que tu fiesta sea única… Realizamos cada pedido con elaboración 100% artesanal. Nuestro catálogo se adapta fácilmente a sus necesidades ofreciendo productos con materia prima de primera calidad.</p>
+
+                    </div>
+
+                    <div class="serviciosCaja centrar flexColumnEvenly serviciosAmbientaciones">
+
+                        <div class="serviciosTitulo" id="serv2">
+
+                            <div class="centrar">
+                                <img class="serviciosIcono" src="images/iconos/iconos-18.png" alt="Ambientaciones">
+                                </div>
+                                <h4 class="secundario">Ambientaciones</h4>
+
+                            </div>
+
+                    </div>
+
+                </div>
+
+                <div class="margenTop flexRowBetween ">
+
+                    <div class="serviciosCaja centrar flexColumnEvenly serviciosCotillon">
+
+                        <div class="serviciosTitulo" id="serv3">
+                            <div class="centrar">
+                                <img class="serviciosIcono" src="images/iconos/iconos-16.png" alt="Cotillón">
+                            </div>
+                                <h4 class="secundario">Cotillón</h4>
+                        </div>
+
+                    </div>
+                    
+                    <div class="serviciosCaja centrar flexColumnEvenly serviciosSouvenirs">
+
+                        <div class="serviciosTitulo" id="serv4">
+                            <div class="centrar">
+                                <img class="serviciosIcono" src="images/iconos/iconos-22.svg" alt="Souvenirs">
+                            </div>
+                                <h4 class="secundario">Souvenirs</h4>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                </div>
+            </section>
+
+        </div>
+
+        <div class="contenedorIconos flexRowEvenly">
+
+            <div class="flexColumn centrar anchoIconos">
+                <i class="fas fa-store destacadosIcono animarIcono" id="uno"></i>
+                <h6 class="margenTop3">Negocio abierto</h6>
+            </div>
+                <hr>
+            <div class="flexColumn centrar anchoIconos">
+                <i class="fas fa-hands-helping destacadosIcono animarIcono" id="dos"></i>
+                <h6 class="margenTop3">Atención personalizada</h6>
+            </div>
+                <hr>
+            <div class="flexColumn centrar anchoIconos">
+                <i class="fas fa-star destacadosIcono animarIcono" id="tres"></i>
+                <h6 class="margenTop3">Calidad de productos</h6>
+            </div>
+                <hr>
+            <div class="flexColumn centrar anchoIconos">
+                <i class="fas fa-truck destacadosIcono animarIcono" id="cuatro"></i>
+                <h6 class="margenTop3">Envío rápido</h6>
+            </div>
+
+        </div>
+
+        <footer class="flexRowBetween">
+
+            <div class="footerBloqueUno">
+
+                <img class="footerLogotipo" src="images/logos/logo.svg" alt="Logotipo">
+
+                <h5 class="blanco margenTop4">Redes Sociales</h5>
+
+                <div class="flexRowBetween footerRedes margenTop4">
+                    <img class="footerIcono" src="images/iconos/iconos-24.svg" alt="facebook">
+                    <img class="footerIcono" src="images/iconos/iconos-25.svg" alt="instagram">
+                    <img class="footerIcono" src="images/iconos/iconos-26.svg" alt="linkedin">
+                    <img class="footerIcono" src="images/iconos/iconos-27.svg" alt="pinterest">
+                </div>
+
+            </div>
+
+            <div class="footerBloqueDos flexRowBetween">
+
+                <div class="footerSeparacionBloqueDos">
+
+                    <div>
+                        <h5 class="blanco">Navegación</h5>
+                        <ul>
+                            <li class="blanco">Tienda</li>
+                            <li class="blanco">Servicios</li>
+                        </ul>
+                    </div>
+
+                    <div class="margenTop3">
+                        <h5 class="blanco">Cuenta</h5>
+                        <ul>
+                            <li class="blanco">Información</li>
+                            <li class="blanco">Mis compras</li>
+                            <li class="blanco">Notificaciones</li>
+                            <li class="blanco">Mis preguntas</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="footerSeparacionBloqueDos">
+
+                    <div>
+                        <h5 class="blanco">Ayuda</h5>
+                        <p class="blanco">Hacenos tu consulta de cualquier producto o servicio en que podamos ayudarte.</p>
+                        <button class="margenTop3">Consultanos</button>
+                    </div>
+
+                </div>
+
+                <div class="footerSeparacionBloqueDos">
+
+                    <div>
+                        <h5 class="blanco">Encontranos</h5>
+                        <div class="margenTop4 flexRowBetween">
+                            <img class="footerIconoDos margenRight" src="images/iconos/iconos-20.svg" alt="">
+                            <p class="blanco">Av. Juan Bautista Alberdi 6040</p>
+                        </div>
+                        <iframe class="margenTop3 footerMapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13128.185317212932!2d-58.51295225855018!3d-34.653532887144515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9aa73d06447%3A0xcc2ea0fc9dc6e404!2sTras%20Bambalinas%20Cotill%C3%B3n!5e0!3m2!1ses!2sar!4v1642803451431!5m2!1ses!2sar" width="100%" height="120px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </footer>
+
+        <!----------Scripts----------->
+
+        <script src="js/clases/carrito.class.js"></script>
+
+        <script src="js/clases/categoria.class.js"></script>
+
+        <script src="js/clases/producto.class.js"></script>
+
+        <script src="js/clases/usuario.class.js"></script>
+
+        <script src="js/clases/colores.class.js"></script>
+
+        <script src="js/datos/categorias.data.js"></script>
+
+        <script src="js/datos/productos.data.js"></script>
+
+        <script src="js/datos/colores.data.js"></script>
+
+        <script src="js/paginas/tienda.js"></script>
+
+        <script src="js/index.js"></script>
+
+        
+    </body>
+
+    <!-- modal -->
+    <div id="modal" class="modal">
+        <h3>Productos en el carrito</h3>
+        <table>
+            <tbody id="carrito">
+                <tr>
+                    <td class="header">Nombre</td>
+                    <td class="header">Precio</th>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#" rel="modal:close"><button>Cerrar</button></a>
     </div>
     
-</body>
 </html>

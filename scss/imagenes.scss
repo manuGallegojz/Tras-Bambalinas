@@ -1,0 +1,36 @@
+//Header
+
+.headerLogotipo{
+    width: 250px;
+}
+
+.headerImagen{
+    float: right;
+    position: absolute;
+    right: 0;
+    height: 200px;
+}
+
+//eleginos
+
+.eleginosImagen{
+    width: 250px;
+}
+
+//servicios
+
+.serviciosFondo{
+    background-image: url(../images/ilustraciones/servicios/serviciosFondo.svg);
+    background-repeat: no-repeat;
+    background-position-y: 280px;
+    padding-bottom: 240px;
+}
+
+//headerSecundario
+
+.headerSecundarioImagen{
+    float: right;
+    position: absolute;
+    right: 0;
+    height: 160px;
+}

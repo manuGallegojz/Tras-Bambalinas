@@ -1,0 +1,109 @@
+//Fuentes
+
+@font-face {
+    font-family: mohrb;
+    src: url(../fonts/mohr-bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: mohrm;
+    src: url(../fonts/mohr-medium.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: mohrl;
+    src: url(../fonts/mohr-light.ttf);
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: sansb;
+    src: url(../fonts/CorporativeSans-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: sansm;
+    src: url(../fonts/CorporativeSans-Medium.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: sansl;
+    src: url(../fonts/CorporativeSans-Light.ttf);
+    font-weight: lighter;
+}
+
+//Colores
+
+.blanco{
+    color: white;
+}
+
+.principal{
+    color: #900C32;
+}
+
+.secundario{
+    color: #edda3a;
+}
+
+.textoColor{
+    color: #420d21;
+}
+
+$principal: #900C32;
+
+$secundario: #edda3a;
+
+$textoColor: #420d21;
+
+//Textos
+
+p{
+    font-family: sansm;
+    font-size: 1.5rem;
+}
+
+h1{
+    font-family: mohrb;
+    font-size: 5rem;
+    line-height: 70px;
+}
+
+h2{
+    font-family: mohrb;
+    font-size: 4rem;
+}
+
+h3{
+    font-family: mohrb;
+    font-size: 3rem;
+}
+
+h4{
+    font-family: mohrm;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+h5{
+    font-family: mohrm;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+h6{
+    font-family: mohrm;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+
+//Estilos
+
+.centrar{
+    text-align: center;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+
+    <!-----css----->
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-----iconos----->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+    <!-----jquery----->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-----favicon----->
+
+    <link rel="icon" href="../images/logos/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+
+    <img class="headerSecundarioImagen" src="../images/ilustraciones/header/headSecundario-37.svg" alt="Año Nuevo">
+
+    <header>
+
+        <a href="file:///D:/proyecto/index.html"><img class="headerLogotipo" src="../images/logos/logo.svg" alt="Logotipo"></a>
+
+        <nav>
+
+            <ul class="flexRowBetween">
+                <a href="../html/tienda.html"><li class="blanco animacion_color">Tienda</li></a>
+                <a href="../html/carrito.html">
+                    <li class="blanco animacion_color headerIcono">
+                        <div class="carritoIcono">
+                            <i class="fas fa-shopping-cart blanco headerIcono"></i>
+                            <div class="circuloCarrito"></div>
+                        </div>
+                        <div class="headerCarritoDespegable margenTop3">
+
+                            <div class="productosCarritoDesplegable">
+
+                            </div>
+
+                            <hr>
+
+                            <p class="margenTop4 totalCarritoDesplegable">Total:</p>
+
+                            <a href="../html/carrito.html"><button class="margenTop4 botonCarritoDesplegable">Ver carrito</button></a>
+
+                        </div>
+                    </li>
+                </a>
+                <li>
+                    <button class="headerBoton principal">
+                        <i class="fas fa-user margenRight principal headerIcono"></i>
+                        Iniciar Sesión
+                    </button>
+                </li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <section class="contenedor flexRowBetween">
+
+        <div class="filtros">
+
+            <div class="margenTop3">
+            </div>
+
+        </div>
+
+
+        <div id="productos" class="flexRowBetween">
+
+
+        </div>
+
+    </section>
+
+    <footer class="flexRowBetween margenTop">
+
+        <div class="footerBloqueUno">
+
+            <img class="footerLogotipo" src="../images/logos/logo.svg" alt="Logotipo">
+
+            <h5 class="blanco margenTop4">Redes Sociales</h5>
+
+            <div class="flexRowBetween footerRedes margenTop4">
+                <img class="footerIcono" src="../images/iconos/iconos-24.svg" alt="facebook">
+                <img class="footerIcono" src="../images/iconos/iconos-25.svg" alt="instagram">
+                <img class="footerIcono" src="../images/iconos/iconos-26.svg" alt="linkedin">
+                <img class="footerIcono" src="../images/iconos/iconos-27.svg" alt="pinterest">
+            </div>
+
+        </div>
+
+        <div class="footerBloqueDos flexRowBetween">
+
+            <div class="footerSeparacionBloqueDos">
+
+                <div>
+                    <h5 class="blanco">Navegación</h5>
+                    <ul>
+                        <li class="blanco">Tienda</li>
+                        <li class="blanco">Servicios</li>
+                    </ul>
+                </div>
+
+                <div class="margenTop3">
+                    <h5 class="blanco">Cuenta</h5>
+                    <ul>
+                        <li class="blanco">Información</li>
+                        <li class="blanco">Mis compras</li>
+                        <li class="blanco">Notificaciones</li>
+                        <li class="blanco">Mis preguntas</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footerSeparacionBloqueDos">
+
+                <div>
+                    <h5 class="blanco">Ayuda</h5>
+                    <p class="blanco">Hacenos tu consulta de cualquier producto o servicio en que podamos ayudarte.</p>
+                    <button class="margenTop3">Consultanos</button>
+                </div>
+
+            </div>
+
+            <div class="footerSeparacionBloqueDos">
+
+                <div>
+                    <h5 class="blanco">Encontranos</h5>
+                    <div class="margenTop4 flexRowBetween">
+                        <img class="footerIconoDos margenRight" src="../images/iconos/iconos-20.svg" alt="">
+                        <p class="blanco">Av. Juan Bautista Alberdi 6040</p>
+                    </div>
+                    <iframe class="margenTop3 footerMapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13128.185317212932!2d-58.51295225855018!3d-34.653532887144515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9aa73d06447%3A0xcc2ea0fc9dc6e404!2sTras%20Bambalinas%20Cotill%C3%B3n!5e0!3m2!1ses!2sar!4v1642803451431!5m2!1ses!2sar" width="100%" height="120px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </footer>
+
+    <!----------Scripts----------->
+
+    <script src="../js/clases/carrito.class.js"></script>
+
+    <script src="../js/clases/categoria.class.js"></script>
+
+    <script src="../js/clases/producto.class.js"></script>
+
+    <script src="../js/clases/colores.class.js"></script>
+
+    <script src="../js/clases/usuario.class.js"></script>
+
+    <script src="../js/datos/categorias.data.js"></script>
+
+    <script src="../js/datos/productos.data.js"></script>
+
+    <script src="../js/datos/colores.data.js"></script>
+
+    <script src="../js/paginas/tienda.js"></script>
+
+    <script src="../js/index.js"></script>
+
+</body>
+</html>
