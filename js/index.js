@@ -4,7 +4,7 @@ $( document ).ready(function() {
 
     funcionProductos();
 
-    apiImagenes();
+    //apiImagenes();
 
 });
 
@@ -255,7 +255,7 @@ function funcionProductos(){
     }
 
 }
-
+/*
 function apiImagenes(){
 
     $.get("https://jsonplaceholder.typicode.com/photos", (respuesta, estado)=>{
@@ -285,7 +285,7 @@ function mostrarImagenes(imagenes){
 
     
 
-}
+}*/
 
 function destacados(){
 

@@ -103,6 +103,9 @@ nav {
 .cursor {
   cursor: pointer; }
 
+.margenTop-1 {
+  margin-top: 20rem; }
+
 .margenTop0 {
   margin-top: 15rem; }
 
@@ -421,8 +424,8 @@ footer {
   .serviciosIcono {
     width: 150px; }
   .serviciosFondo {
-    background-position-y: 500px;
-    padding-bottom: 20px; }
+    background-position-y: 450px;
+    padding-bottom: 500px; }
   .contenedorIconos {
     height: 250px;
     margin: 70px 0; }
