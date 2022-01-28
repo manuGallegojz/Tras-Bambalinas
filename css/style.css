@@ -177,6 +177,10 @@ button {
 .flex {
   display: flex; }
 
+.wrap {
+  display: flex;
+  flex-wrap: wrap; }
+
 .flexColumn {
   display: flex;
   flex-direction: column;
@@ -418,7 +422,7 @@ footer {
     width: 150px; }
   .serviciosFondo {
     background-position-y: 500px;
-    padding-bottom: 330px; }
+    padding-bottom: 20px; }
   .contenedorIconos {
     height: 250px;
     margin: 70px 0; }

@@ -138,6 +138,11 @@ button{
     display: flex;
 }
 
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .flexColumn{
     display: flex;
     flex-direction: column;

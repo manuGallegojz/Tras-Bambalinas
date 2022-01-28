@@ -4,6 +4,7 @@ $( document ).ready(function() {
 
     funcionProductos();
 
+    apiImagenes();
 
 });
 
@@ -45,11 +46,11 @@ function funcionCarrito(){
                                     .fadeOut(200)
                                 })
 
-    links_navegacion();
+    linksNavegacion();
 
 }
 
-function links_navegacion(){
+function linksNavegacion(){
 
     if(window.location.href == "file:///D:/proyecto/index.html"){
 
@@ -68,7 +69,7 @@ function mostrarCarritoDesplegable(ubicacionPagina){
 
     if(localStorage.length > 0){
 
-    for (i = 1; i < localStorage.length; i++) {
+    for (i = 0; i < localStorage.length; i++) {
 
     let productosAlmacenados = localStorage.getItem(i);
 
@@ -218,6 +219,7 @@ function animacionAparecer(){
 
 function funcionProductos(){
 
+
     for(var i=0;i<productos.length; i++)
     {
 
@@ -251,6 +253,37 @@ function funcionProductos(){
             if(i == 3) break;
 
     }
+
+}
+
+function apiImagenes(){
+
+    $.get("https://jsonplaceholder.typicode.com/photos", (respuesta, estado)=>{
+
+        mostrarImagenes(respuesta)
+
+    })
+
+}
+
+function mostrarImagenes(imagenes){
+
+    console.log(imagenes)
+
+    let listaImagenes =  imagenes.map((imagen) => `<img class"margenTop" style="width: 300px; margin: 20px" src=${imagen.url} alt=${imagen.title}></img>`);
+
+    const nodoGaleria = $(".galeria");
+
+    for (let index = 0; index < listaImagenes.length; index++) {
+        
+        nodoGaleria.append(listaImagenes[index]);
+
+        if(index > 6) break;
+
+    }
+
+
+    
 
 }
 

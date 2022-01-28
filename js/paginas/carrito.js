@@ -4,6 +4,7 @@ $( document ).ready(function()
 
 });
 
+
 function mostrarCarrito(){
 
     let suma = 0;
@@ -75,3 +76,4 @@ let sumaTotal = $("<div></div>")
 nodoInformacion.append(sumaTotal);
 
 }
+
