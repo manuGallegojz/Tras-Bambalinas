@@ -31,6 +31,7 @@
         <!-----favicon----->
 
         <link rel="icon" href="images/logos/favicon.ico" type="image/x-icon">
+        
 
     </head>
     <body>
@@ -72,10 +73,11 @@
                         <li class="cursor">
 
                             <div>
-                                <button class="headerBoton principal">
-                                    <i class="fas fa-user margenRight principal headerIcono"></i>
-                                    Iniciar Sesión
-                                </button>
+                                <a href="#modal">
+                                    <button class="headerBoton principal">
+                                        <i class="fas fa-user margenRight principal headerIcono"></i>
+                                    </button>
+                                </a>
                             </div> 
 
                         </li>
@@ -86,8 +88,8 @@
                 </nav>
 
 
-            <div class="headerInformacion">
-                <h1>Celebremos Año Nuevo</h1>
+            <div class="headerInformacion centrar">
+                <h1 class="centrar">Celebremos Año Nuevo</h1>
                 <p class="margenTop2">Contamos con ofertas especiales en los productos especiales para poder festejar este nuevo año con las manos bien arriba!</p>
                 <a href="#servicios"><button class="margenTop3">Ver Servicios</button></a>
             </div>
@@ -147,7 +149,7 @@
 
         <!--Categorías-->
 
-        <section class="contenedor">
+        <section class="contenedor centrar">
 
             <h1>Ver Categorías</h1>
 
@@ -182,7 +184,7 @@
 
             <!--Productos-->
 
-            <section class="contenedor">
+            <section class="contenedor centrar">
 
                 <h1>Más Vendidos</h1>
 
@@ -194,13 +196,14 @@
 
             <section class="contenedor" id="servicios">
                 <div>
-                <h1 class="secundario">Servicios</h1>
+                <h1 class="secundario centrar">Servicios</h1>
 
                 <div class="margenTop flexRowBetween">
 
+
                     <div class="serviciosCaja centrar flexColumnEvenly serviciosReposteria">
 
-                        <div class="serviciosTitulo" id="serv1">
+                        <div class="serviciosTitulo serviciosTituloReposteria" id="serv1">
 
                             <div class="centrar">
                                 <img class="serviciosIcono" src="images/iconos/iconos-19.svg" alt="Repostería">
@@ -209,46 +212,56 @@
 
                         </div>
 
-                        <p class="secundario serviciosDescripcion">Ofrecemos la más amplia variedad de tortas, mesas dulces, desayunos, ambientaciones para que tu fiesta sea única… Realizamos cada pedido con elaboración 100% artesanal. Nuestro catálogo se adapta fácilmente a sus necesidades ofreciendo productos con materia prima de primera calidad.</p>
+                        <p class="secundario serviciosDescripcion serviciosDescripcionReposteria">Ofrecemos la más amplia variedad de tortas, mesas dulces, desayunos, ambientaciones para que tu fiesta sea única… Realizamos cada pedido con elaboración 100% artesanal. Nuestro catálogo se adapta fácilmente a sus necesidades ofreciendo productos con materia prima de primera calidad.</p>
 
                     </div>
+
 
                     <div class="serviciosCaja centrar flexColumnEvenly serviciosAmbientaciones">
 
-                        <div class="serviciosTitulo" id="serv2">
+                        <div class="serviciosTitulo serviciosTituloAmbientaciones" id="serv2">
 
                             <div class="centrar">
                                 <img class="serviciosIcono" src="images/iconos/iconos-18.png" alt="Ambientaciones">
-                                </div>
+                            </div>
                                 <h4 class="secundario">Ambientaciones</h4>
 
-                            </div>
+                        </div>
+
+                        <p class="secundario serviciosDescripcion serviciosDescripcionAmbientaciones">Con casi 2 décadas de experiencia en el desarrollo de eventos, contamos con la experiencia y el reconocimiento de nuestros clientes en la puesta en escena de todo tipo de acontecimientos. Ofreciendo servicios tales como globología, entelado, floristería, centros de mesa y mucho más!</p>
 
                     </div>
 
+
                 </div>
 
-                <div class="margenTop flexRowBetween ">
+                <div class="margenTop flexRowBetween">
 
                     <div class="serviciosCaja centrar flexColumnEvenly serviciosCotillon">
 
-                        <div class="serviciosTitulo" id="serv3">
+                        <div class="serviciosTitulo serviciosTituloCotillon" id="serv3">
                             <div class="centrar">
                                 <img class="serviciosIcono" src="images/iconos/iconos-16.png" alt="Cotillón">
                             </div>
                                 <h4 class="secundario">Cotillón</h4>
                         </div>
 
+                        <p class="secundario serviciosDescripcion serviciosDescripcionCotillon">Contamos con la más amplia variedad de productos y servicios, personalizando tu pedido de manera especial! Nuestro catálogo se adapta a tus necesidades ofreciendo productos totalmente originales, con materia prima de primera calidad y gran mano de obra!
+
+                        </p>
+
                     </div>
                     
                     <div class="serviciosCaja centrar flexColumnEvenly serviciosSouvenirs">
 
-                        <div class="serviciosTitulo" id="serv4">
+                        <div class="serviciosTitulo serviciosTituloSouvenirs" id="serv4">
                             <div class="centrar">
                                 <img class="serviciosIcono" src="images/iconos/iconos-22.svg" alt="Souvenirs">
                             </div>
                                 <h4 class="secundario">Souvenirs</h4>
                         </div>
+
+                        <p class="secundario serviciosDescripcion serviciosDescripcionSouvenirs">Elaboramos distintos tipos de tarjetería y souvenirs personalizados combinando distintas técnicas de manualidades, adaptándonos específicamente a lo que estés buscando. Contamos de igual forma con el servicio de tarjetería quilling y podés elegir entre souvenirs en madera, velas, jabones y alambres; frascos, perfumes, en telas y muchos más!</p>
 
                     </div>
 
@@ -258,18 +271,6 @@
             </section>
 
         </div>
-
-        <!---
-
-        <section class="contenedor margenTop-1">
-
-            <h1>Galería</h1>
-
-            <div class="galeria margenTop2 flexRowBetween wrap">
-
-            </div>
-
-        </section>--->
 
         <div class="contenedorIconos flexRowEvenly">
 
@@ -297,75 +298,115 @@
 
         <footer class="flexRowBetween">
 
-            <div class="footerBloqueUno">
+            <div class="footerBloqueUno centrar flexCentrar justifyCenter">
 
-                <img class="footerLogotipo" src="images/logos/logo.svg" alt="Logotipo">
+                <a href="file:///D:/proyecto/index.html"><img class="footerLogotipo" src="images/logos/logo.svg" alt="Logotipo"></a>
 
-                <h5 class="blanco margenTop4">Redes Sociales</h5>
+            </div>
 
-                <div class="flexRowBetween footerRedes margenTop4">
-                    <img class="footerIcono" src="images/iconos/iconos-24.svg" alt="facebook">
-                    <img class="footerIcono" src="images/iconos/iconos-25.svg" alt="instagram">
-                    <img class="footerIcono" src="images/iconos/iconos-26.svg" alt="linkedin">
-                    <img class="footerIcono" src="images/iconos/iconos-27.svg" alt="pinterest">
+            <div class="footerBloqueDos flexColumnBetween centrar">
+
+                <div class="footerSeparacionBloqueDos">
+
+                    <div>
+                        <h5 class="blanco ">Navegación</h5>
+                        <ul>
+                            <a href="file:///D:/proyecto/html/tienda.html"><li class="blanco">Tienda</li></a>
+                            <a href="file:///D:/proyecto/html/carrito.html"><li class="blanco">Carrito</li></a>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <h5 class="blanco margenTop4">Redes Sociales</h5>
+
+                    <div class="margenTop4">
+                        <img class="footerIcono margenRight" src="images/iconos/iconos-24.svg" alt="facebook">
+                        <img class="footerIcono margenRight" src="images/iconos/iconos-25.svg" alt="instagram">
+                        <img class="footerIcono margenRight" src="images/iconos/iconos-26.svg" alt="linkedin">
+                        <img class="footerIcono margenRight" src="images/iconos/iconos-27.svg" alt="pinterest">
+                    </div>
+
                 </div>
 
             </div>
 
-            <div class="footerBloqueDos flexRowBetween">
-
                 <div class="footerSeparacionBloqueDos">
 
                     <div>
-                        <h5 class="blanco">Navegación</h5>
-                        <ul>
-                            <li class="blanco">Tienda</li>
-                            <li class="blanco">Servicios</li>
-                        </ul>
-                    </div>
-
-                    <div class="margenTop3">
-                        <h5 class="blanco">Cuenta</h5>
-                        <ul>
-                            <li class="blanco">Información</li>
-                            <li class="blanco">Mis compras</li>
-                            <li class="blanco">Notificaciones</li>
-                            <li class="blanco">Mis preguntas</li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div class="footerSeparacionBloqueDos">
-
-                    <div>
-                        <h5 class="blanco">Ayuda</h5>
-                        <p class="blanco">Hacenos tu consulta de cualquier producto o servicio en que podamos ayudarte.</p>
-                        <button class="margenTop3">Consultanos</button>
-                    </div>
-
-                </div>
-
-                <div class="footerSeparacionBloqueDos">
-
-                    <div>
-                        <h5 class="blanco">Encontranos</h5>
-                        <div class="margenTop4 flexRowBetween">
-                            <img class="footerIconoDos margenRight" src="images/iconos/iconos-20.svg" alt="">
+                        <h5 class="blanco centrar">Encontranos</h5>
+                        <div class="margenTop4 flex justifyCenter">
+                            <img class="footerIconoDos margenRight centrar flexCentrar" src="images/iconos/iconos-20.svg" alt="">
                             <p class="blanco">Av. Juan Bautista Alberdi 6040</p>
                         </div>
-                        <iframe class="margenTop3 footerMapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13128.185317212932!2d-58.51295225855018!3d-34.653532887144515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9aa73d06447%3A0xcc2ea0fc9dc6e404!2sTras%20Bambalinas%20Cotill%C3%B3n!5e0!3m2!1ses!2sar!4v1642803451431!5m2!1ses!2sar" width="100%" height="120px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe class="margenTop3 footerMapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13128.185317212932!2d-58.51295225855018!3d-34.653532887144515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9aa73d06447%3A0xcc2ea0fc9dc6e404!2sTras%20Bambalinas%20Cotill%C3%B3n!5e0!3m2!1ses!2sar!4v1642803451431!5m2!1ses!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
 
                 </div>
-
-            </div>
-
-
 
         </footer>
 
+        <!----------Modal----------->
+
+            <div class="modal modalAnimacion1">
+                <h3>Iniciar Sesión</h3>
+
+                <form action="">
+
+                    <label for="mail"><p>Email:</p></label>
+                    <input class="inputSesion margenTop4 valorEmail" type="text" name="mail">
+                    <label class="margenTop2" for="clave"><p>Contraseña:</p></label>
+                    <input class="inputSesion margenTop4 valorClave" type="password" name="clave">
+                    <input class="enviarModal margenTop4" type="submit" value="Iniciar">
+
+                </form>
+
+                <p class="botonRegistro">¿No tenés cuenta creada?</p>
+
+            </div>
+
+
+        <div class="modal modalAnimacion2">
+            <h3>Registrarse</h3>
+
+                <label for="name"><p>Nombre:</p></label>
+                <input class="inputSesion margenTop4 nombreRegistro" type="text" name="name">
+
+                <label for="surname"><p>Apellido:</p></label>
+                <input class="inputSesion margenTop4 apellidoRegistro" type="text" name="surname">
+
+                <label for="mail"><p>Email:</p></label>
+                <input class="inputSesion margenTop4 emailRegistro" type="text" name="mail">
+
+                <label class="margenTop2" for="clave"><p>Contraseña:</p></label>
+                <input class="inputSesion margenTop4 claveRegistro" type="password" name="clave">
+
+                <input class="enviarModal registroBoton margenTop4" type="submit" value="Registrarse">
+                
+            </div>
+        </div>
+
+        <div class="modal modalAnimacion3">
+
+            <button class="botonCerrarSesion margenTop4">Eliminar Cuenta</button>
+
+            <p class="margenTop4">¡Aviso! No podrás recuperar tu cuenta nuevamente!</p>
+
+        </div>
+
+        <div class="modal modalAnimacion4">
+
+            <h3>Cuenta Eliminada</h3>
+
+            <p>Presiona ESC para salir.</p>
+
+        </div>
+
+
         <!----------Scripts----------->
+        <!----------Clases----------->
 
         <script src="js/clases/carrito.class.js"></script>
 
@@ -375,25 +416,20 @@
 
         <script src="js/clases/usuario.class.js"></script>
 
+        <!----------Datos----------->
+
         <script src="js/datos/productos.data.js"></script>
+
+        <!----------Eventos----------->
+
+        <script src="js/eventos/servicios.event.js"></script>
+
+        <script src="js/eventos/modal.event.js"></script>
+
+        <!----------Index----------->
 
         <script src="js/index.js"></script>
 
-        
-    </body>
 
-    <!-- modal -->
-    <div id="modal" class="modal">
-        <h3>Productos en el carrito</h3>
-        <table>
-            <tbody id="carrito">
-                <tr>
-                    <td class="header">Nombre</td>
-                    <td class="header">Precio</th>
-                </tr>
-            </tbody>
-        </table>
-        <a href="#" rel="modal:close"><button>Cerrar</button></a>
-    </div>
-    
+    </body>
 </html>

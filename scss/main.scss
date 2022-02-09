@@ -6,7 +6,7 @@
 
 @charset "UTF-8";
 
-* {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box; 
@@ -45,9 +45,35 @@
     border-radius: 50%;
     display: inline-block;
     text-align: center;
-    position: absolute;
-    top: 50px;
-    right: 235px;
+}
+
+//modal
+
+.anchoModal{
+    width: 900px;
+}
+
+.inputSesion{
+    width: 100%;
+    padding: 5px 20px 7px 20px;
+    font-family: sansm;
+    font-size: 1.5rem;
+    color: $textoColor;
+    border-radius: 100px;
+    border: 3px solid $principal;
+
+}
+
+.enviarModal{
+    width: auto;
+    background-color: $principal;
+    padding: 5px 20px 9px 20px;
+    font-family: sansm;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 100px;
+    border: none;
+    cursor:pointer;
 }
 
 //Elegirnos
@@ -157,11 +183,11 @@ footer{
 }
 
 .footerIcono{
-    width: 35px;
+    width: 25px;
 }
 
 .footerIconoDos{
-    width: 25px;
+    width: 20px;
 }
 
 
@@ -172,7 +198,7 @@ footer{
 //bloqueDos
 
 .footerBloqueDos{
-    width: 85%;
+    width: 30%;
     height: 100%;
 }
 
@@ -217,7 +243,7 @@ footer{
 
     .headerInformacion{
         margin-top: 50px;
-        width: 550px;
+        width: 700px;
     }
 
     
@@ -234,10 +260,7 @@ footer{
         border-radius: 50%;
         display: inline-block;
         text-align: center;
-        position: absolute;
         font-size: 1rem;
-        top: 0px;
-        right: 295px;
     }
 
     nav{
@@ -261,6 +284,7 @@ footer{
     .icono{
         width: 100px;
     }
+
 
     //eleginos
 
@@ -321,7 +345,7 @@ footer{
     
     .serviciosFondo{
         background-position-y: 450px;
-        padding-bottom: 500px;
+        padding-bottom: 360px;
     }
 
     //Aspectos
@@ -352,26 +376,21 @@ footer{
     }
 
     .footerLogotipo{
-        width: 300px;
+        width: 350px;
     }
 
     .footerIcono{
-        width: 70px;
-    }
-
-    .footerIconoDos{
         width: 50px;
     }
 
-
-    .footerRedes{
-        width: 100%;
+    .footerIconoDos{
+        width: 30px;
     }
 
     //bloqueDos
 
     .footerBloqueDos{
-        width: 65%;
+        width: auto;
         height: 100%;
     }
 

@@ -14,10 +14,14 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-
     <!-----jquery----->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+        defer />
 
     <!-----favicon----->
 
@@ -80,7 +84,7 @@
         </div>
 
 
-        <div id="productos" class="flexRowBetween">
+        <div id="productos" class="flexRowBetween centrar">
 
 
         </div>
@@ -157,7 +161,64 @@
 
     </footer>
 
+    <!----------Modal----------->
+
+        <div class="modal modalAnimacion1">
+            <h3>Iniciar Sesión</h3>
+
+            <form action="">
+
+                <label for="mail"><p>Email:</p></label>
+                <input class="inputSesion margenTop4 valorEmail" type="text" name="mail">
+                <label class="margenTop2" for="clave"><p>Contraseña:</p></label>
+                <input class="inputSesion margenTop4 valorClave" type="password" name="clave">
+                <input class="enviarModal margenTop4" type="submit" value="Iniciar">
+
+            </form>
+
+            <p class="botonRegistro">¿No tenés cuenta creada?</p>
+
+        </div>
+
+
+        <div class="modal modalAnimacion2">
+            <h3>Registrarse</h3>
+
+                <label for="name"><p>Nombre:</p></label>
+                <input class="inputSesion margenTop4 nombreRegistro" type="text" name="name">
+
+                <label for="surname"><p>Apellido:</p></label>
+                <input class="inputSesion margenTop4 apellidoRegistro" type="text" name="surname">
+
+                <label for="mail"><p>Email:</p></label>
+                <input class="inputSesion margenTop4 emailRegistro" type="text" name="mail">
+
+                <label class="margenTop2" for="clave"><p>Contraseña:</p></label>
+                <input class="inputSesion margenTop4 claveRegistro" type="password" name="clave">
+
+                <input class="enviarModal registroBoton margenTop4" type="submit" value="Registrarse">
+                
+            </div>
+        </div>
+
+        <div class="modal modalAnimacion3">
+
+            <button class="botonCerrarSesion margenTop4">Eliminar Cuenta</button>
+
+            <p class="margenTop4">¡Aviso! No podrás recuperar tu cuenta nuevamente!</p>
+
+        </div>
+
+        <div class="modal modalAnimacion4">
+
+            <h3>Cuenta Eliminada</h3>
+
+            <p>Presiona ESC para salir.</p>
+
+        </div>
+
     <!----------Scripts----------->
+    <!----------Clases----------->
 
     <script src="../js/clases/carrito.class.js"></script>
 
@@ -169,13 +230,25 @@
 
     <script src="../js/clases/usuario.class.js"></script>
 
+    <!----------Datos----------->
+
     <script src="../js/datos/categorias.data.js"></script>
 
     <script src="../js/datos/productos.data.js"></script>
 
     <script src="../js/datos/colores.data.js"></script>
 
+    <!----------Paginas----------->
+
     <script src="../js/paginas/tienda.js"></script>
+
+    <!----------Eventos----------->
+
+    <script src="../js/eventos/filtros.event.js"></script>
+
+    <script src="../js/eventos/modal.event.js"></script>
+
+    <!----------Index----------->
 
     <script src="../js/index.js"></script>
 

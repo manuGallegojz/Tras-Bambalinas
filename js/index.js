@@ -4,8 +4,6 @@ $( document ).ready(function() {
 
     funcionProductos();
 
-    //apiImagenes();
-
 });
 
 function animaciones(){
@@ -16,8 +14,6 @@ function animaciones(){
 
     funcionCategorias();
 
-    servicios();
-
     destacados();
 
 }
@@ -26,7 +22,11 @@ const carritoCompras = new carrito([], {});
 
 function funcionCarrito(){
 
-    $(".circuloCarrito").html(localStorage.length);
+    //cantidad de productos en el carrito
+
+    //localStorage.getItem("usuario") ? $(".circuloCarrito").html(localStorage.length-1) : $(".circuloCarrito").html(localStorage.length);
+
+    //animacion en el carrito desplegable
 
     $(".headerCarritoDespegable").hide();
 
@@ -46,83 +46,87 @@ function funcionCarrito(){
                                     .fadeOut(200)
                                 })
 
-    linksNavegacion();
+    //productos en el carrito desplegable
+
+    mostrarCarritoDesplegable();
 
 }
 
-function linksNavegacion(){
+function mostrarCarritoDesplegable(){
 
-    if(window.location.href == "file:///D:/proyecto/index.html"){
+    //ubicacion para las imagenes del carrito
 
-        mostrarCarritoDesplegable("");
-    }else{
-        mostrarCarritoDesplegable("../");
-    }
-}
+    let ubicacion;
 
-function mostrarCarritoDesplegable(ubicacionPagina){
+    window.location.href == "file:///D:/proyecto/index.html" ? ubicacion = "" : ubicacion = "../";
 
-    let suma = 0;
+    //funciones para productos y el total
 
-    const nodoProductosDesplegable = $(".productosCarritoDesplegable")
-                                    .html("");
+    localStorage.getItem("usuario") ? productosCarritoDespegable(1, ubicacion) : productosCarritoDespegable(0, ubicacion);
 
-    if(localStorage.length > 0){
-
-    for (i = 0; i < localStorage.length; i++) {
-
-    let productosAlmacenados = localStorage.getItem(i);
-
-    let productoFinal = JSON.parse(productosAlmacenados);
-
-    const productoMuestra = $("<div></div>")
-                            .addClass("carritoDesplegableProducto margenBot3 flex")
-                            .html(`
-                            <img src="${ubicacionPagina}${productoFinal.imagen}" alt="">
-
-                            <div>
-
-                                    <p class="margenTop4">${productoFinal.titulo}</p>
-
-                                <p>$${productoFinal.precio}</p>
-
-                            </div>
-                        `);
-
-                        nodoProductosDesplegable.prepend(productoMuestra);
-
-                        suma += productoFinal.precio;
-
-    if(i == 3) break;
-
-    }
-
-    
-}
-else{
-
-    const carritoVacio = $("<div></div>")
-                        .addClass("carrito_vacio")
-                        .html(`<div>
-                                <p>Tu carrito está vacío.<p>
-                                </div>`);
-
-                                nodoProductosDesplegable.prepend(carritoVacio[0]);
-
-}
-
-funcionTotalCarritoDesplegable();
-
-$(".botonCarritoDesplegable").html("Ver carrito")
-                        .addClass("margenTop4")
+    localStorage.getItem("usuario") ? funcionTotalCarritoDesplegable(1) : funcionTotalCarritoDesplegable(0);
                         
 }
 
-function funcionTotalCarritoDesplegable(){
+function productosCarritoDespegable(numero, ubicacion){
+
+    $(".productosCarritoDesplegable").html("");
 
     let suma = 0;
 
-    if(localStorage.length > 0){
+    const nodoProductosDesplegable = $(".productosCarritoDesplegable");
+
+    if(localStorage.length > numero){
+
+        for (i = 1; i < localStorage.length; i++) {
+    
+        let productosAlmacenados = localStorage.getItem(i);
+    
+        let productoFinal = JSON.parse(productosAlmacenados);
+    
+        const productoMuestra = $("<div></div>")
+                                .addClass("carritoDesplegableProducto margenBot3 flex")
+                                .html(`
+                                <img src="${ubicacion}${productoFinal.imagen}" alt="">
+    
+                                <div>
+    
+                                        <p class="margenTop4">${productoFinal.titulo}</p>
+    
+                                    <p>$${productoFinal.precio}</p>
+    
+                                </div>
+                            `);
+    
+                            nodoProductosDesplegable.prepend(productoMuestra);
+    
+                            suma += productoFinal.precio;
+    
+        if(i == 3) break;
+    
+        }
+    
+
+    }
+    else{
+
+        const carritoVacio = $("<div></div>")
+                            .addClass("carrito_vacio")
+                            .html(`<div>
+                                    <p>Tu carrito está vacío.<p>
+                                    </div>`);
+    
+                                    nodoProductosDesplegable.prepend(carritoVacio[0]);
+    
+    }
+
+}
+
+function funcionTotalCarritoDesplegable(numero){
+
+    let suma = 0;
+
+    if(localStorage.length > numero){
 
         for (i=1; i < localStorage.length; i++) {
 
@@ -187,38 +191,18 @@ function funcionCategorias(){
 }
 
 
-function servicios(){
-
-    $(".serviciosDescripcion").hide();
-
-    $(".serviciosCaja").css("cursor", "pointer")
-                        .mouseenter(animacionDesaparecer);
-
-    $(".serviciosCaja").css("cursor", "pointer")
-                    .mouseleave(animacionAparecer);
-
-}
-
-function animacionDesaparecer(){
-
-    $(".serviciosTitulo").fadeOut("fast", ()=>{
-        $(".serviciosDescripcion").fadeIn();
-    });
-        
-    
-
-}
-
-function animacionAparecer(){
-    
-    $(".serviciosDescripcion").fadeOut("fast", ()=>{
-        $(".serviciosTitulo").fadeIn();
-    });
-}
-
 
 function funcionProductos(){
 
+    let ubicacion;
+
+    window.location.href == "file:///D:/proyecto/index.html" ? ubicacion = "" : ubicacion = "../";
+
+    let cantidadProductos;
+    
+    localStorage.getItem("usuario") ? cantidadProductos = localStorage.length-1 : cantidadProductos = localStorage.length ;
+
+    $(".circuloCarrito").html(cantidadProductos);
 
     for(var i=0;i<productos.length; i++)
     {
@@ -229,7 +213,7 @@ function funcionProductos(){
 
         let productosBloque = $("<div></div>")
                             .addClass("productoCaja")
-                            .html(`<img class="productoImagen" src=${producto.imagen} alt="Cotillon">
+                            .html(`<img class="productoImagen" src=${ubicacion}${producto.imagen} alt="Cotillon">
 
                         <div class="margenTop3 productoInfo">
                             <h5>${producto.titulo}</h5>
@@ -245,7 +229,11 @@ function funcionProductos(){
                                 .html("Agregar Producto")
                                 .addClass("boton_agregar_carrito margenTop4")
                                 .click(() =>{
-                                carritoCompras.agregar(producto)
+                                carritoCompras.agregar(producto);
+
+                                cantidadProductos++;
+
+                                $(".circuloCarrito").html(cantidadProductos)
             });
 
             productosBloque.append(botonComprar[0]);
@@ -255,37 +243,6 @@ function funcionProductos(){
     }
 
 }
-/*
-function apiImagenes(){
-
-    $.get("https://jsonplaceholder.typicode.com/photos", (respuesta, estado)=>{
-
-        mostrarImagenes(respuesta)
-
-    })
-
-}
-
-function mostrarImagenes(imagenes){
-
-    console.log(imagenes)
-
-    let listaImagenes =  imagenes.map((imagen) => `<img class"margenTop" style="width: 300px; margin: 20px" src=${imagen.url} alt=${imagen.title}></img>`);
-
-    const nodoGaleria = $(".galeria");
-
-    for (let index = 0; index < listaImagenes.length; index++) {
-        
-        nodoGaleria.append(listaImagenes[index]);
-
-        if(index > 6) break;
-
-    }
-
-
-    
-
-}*/
 
 function destacados(){
 

@@ -2,6 +2,10 @@ $( document ).ready(function()
 {
     mostrarCarrito();
 
+    vaciarCarrito();
+
+    mostrarModalCarrito();
+
 });
 
 
@@ -12,7 +16,7 @@ function mostrarCarrito(){
     const nodoCarrito = $("#carrito")
                             .html("");
 
-    if(localStorage.length > 0){
+    if(localStorage.length > 1){
 
     for (i=1; i < localStorage.length; i++) {
     
@@ -77,3 +81,29 @@ nodoInformacion.append(sumaTotal);
 
 }
 
+function vaciarCarrito(){
+
+    $(".vaciarCarro").click(()=>{
+        let cantidad = localStorage.length+1;
+
+        for(i = 0;cantidad > i; i++)
+        {
+            localStorage.removeItem(i);
+        }
+
+        mostrarCarrito();
+    })
+
+}
+
+function mostrarModalCarrito(){
+
+    let boton = $(".modalAnimacionCarrito1");
+
+    boton.click(()=>{
+        $(".modalAnimacionCarrito1").modal({
+            fadeDuration: 500
+        });
+    })
+
+}

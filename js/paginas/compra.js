@@ -10,5 +10,11 @@ function funcionNumeroPedido(){
 }
 
 function limpiarLocal(){
-    localStorage.clear();
-}
+
+    let cantidad = localStorage.length+1;
+
+    for(i = 0;cantidad > i; i++)
+        {
+        localStorage.removeItem(i);
+        }
+    }

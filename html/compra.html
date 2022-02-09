@@ -14,10 +14,14 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-
     <!-----jquery----->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+        defer />
 
     <!-----favicon----->
 
@@ -35,20 +39,42 @@
         <nav>
 
             <ul class="flexRowBetween">
-                <a href="../html/tienda.html"><li class="blanco animacion_color">Tienda</li></a>
-                <a href="../index.html"><li class="blanco animacion_color">Servicios</li></a>
-                <a href="../html/carrito.html">
+                <a href="../html/tienda.html"><li class="blanco animacion_color cursor">Tienda</li></a>
                     <li class="blanco animacion_color headerIcono">
-                        <i class="fas fa-shopping-cart blanco headerIcono"></i>
-                        <div class="circuloCarrito">0</div>
-                    </li>
+                <a href="../html/carrito.html">
+                        <div class="carritoIcono cursor">
+                            <i class="fas fa-shopping-cart blanco headerIcono"></i>
+                            <div class="circuloCarrito"></div>
+                        </div>
                 </a>
-                <li>
-                    <button class="headerBoton principal">
-                        <i class="fas fa-user margenRight principal headerIcono"></i>
-                        Iniciar Sesión
-                    </button>
+                        <div class="headerCarritoDespegable margenTop4">
+
+                            <div class="productosCarritoDesplegable">
+
+                            </div>
+
+                            <hr>
+
+                            <p class="margenTop4 totalCarritoDesplegable">Total:</p>
+
+                            <a href="../html/carrito.html"><button class="margenTop4 botonCarritoDesplegable">Ver carrito</button></a>
+
+                        </div>
+                    </li>
+                
+                <li class="cursor">
+
+                    <div>
+                        <a href="#modal">
+                            <button class="headerBoton principal">
+                                <i class="fas fa-user margenRight principal headerIcono"></i>
+                            </button>
+                        </a>
+                    </div> 
+
                 </li>
+                
+
             </ul>
 
         </nav>
@@ -142,25 +168,86 @@
 
     </footer>
 
+    <!----------Modal----------->
+
+    <div class="modal modalAnimacion1">
+        <h3>Iniciar Sesión</h3>
+
+        <form action="">
+
+            <label for="mail"><p>Email:</p></label>
+            <input class="inputSesion margenTop4 valorEmail" type="text" name="mail">
+            <label class="margenTop2" for="clave"><p>Contraseña:</p></label>
+            <input class="inputSesion margenTop4 valorClave" type="password" name="clave">
+            <input class="enviarModal margenTop4" type="submit" value="Iniciar">
+
+        </form>
+
+        <p class="botonRegistro">¿No tenés cuenta creada?</p>
+
+    </div>
+
+
+    <div class="modal modalAnimacion2">
+        <h3>Registrarse</h3>
+
+            <label for="name"><p>Nombre:</p></label>
+            <input class="inputSesion margenTop4 nombreRegistro" type="text" name="name">
+
+            <label for="surname"><p>Apellido:</p></label>
+            <input class="inputSesion margenTop4 apellidoRegistro" type="text" name="surname">
+
+            <label for="mail"><p>Email:</p></label>
+            <input class="inputSesion margenTop4 emailRegistro" type="text" name="mail">
+
+            <label class="margenTop2" for="clave"><p>Contraseña:</p></label>
+            <input class="inputSesion margenTop4 claveRegistro" type="password" name="clave">
+
+            <input class="enviarModal registroBoton margenTop4" type="submit" value="Registrarse">
+            
+        </div>
+    </div>
+
+    <div class="modal modalAnimacion3">
+
+        <button class="botonCerrarSesion margenTop4">Eliminar Cuenta</button>
+
+        <p class="margenTop4">¡Aviso! No podrás recuperar tu cuenta nuevamente!</p>
+
+    </div>
+
+    <div class="modal modalAnimacion4">
+
+        <h3>Cuenta Eliminada</h3>
+
+        <p>Presiona ESC para salir.</p>
+
+    </div>
+
     <!----------Scripts----------->
+    <!----------Clases----------->
 
     <script src="../js/clases/carrito.class.js"></script>
-
-    <script src="../js/clases/categoria.class.js"></script>
 
     <script src="../js/clases/producto.class.js"></script>
 
     <script src="../js/clases/usuario.class.js"></script>
 
-    <script src="../js/datos/categorias.data.js"></script>
+    <!----------Datos----------->
 
     <script src="../js/datos/productos.data.js"></script>
 
-    <script src="../js/paginas/tienda.js"></script>
+    <!----------Eventos----------->
+
+    <script src="../js/eventos/modal.event.js"></script>
+
+    <!----------Paginas----------->
 
     <script src="../js/paginas/carrito.js"></script>
 
     <script src="../js/paginas/compra.js"></script>
+
+    <!----------Index----------->
 
     <script src="../js/index.js"></script>
 

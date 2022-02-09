@@ -213,7 +213,7 @@ const productos = [
     categoria: 2,
     stock:5,
     id: 3,
-    color: "rojo",
+    color: "azul",
     estrellas: 3
 
 },
@@ -290,7 +290,7 @@ const productos = [
     categoria: 2,
     stock:5,
     id: 3,
-    color: "rojo",
+    color: "blanco",
     estrellas: 3
 
 },
@@ -356,7 +356,7 @@ const productos = [
     categoria: 2,
     stock:5,
     id: 3,
-    color: "rojo",
+    color: "multicolor",
     estrellas: 3
 
 },
@@ -367,7 +367,7 @@ const productos = [
     categoria: 2,
     stock:5,
     id: 3,
-    color: "rojo",
+    color: "multicolor",
     estrellas: 3
 
 },
