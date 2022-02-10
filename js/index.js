@@ -194,10 +194,6 @@ function funcionCategorias(){
 
 function funcionProductos(){
 
-    let ubicacion;
-
-    window.location.href == "../index.html" ? ubicacion = "" : ubicacion = "../";
-
     let cantidadProductos;
     
     localStorage.getItem("usuario") ? cantidadProductos = localStorage.length-1 : cantidadProductos = localStorage.length ;
@@ -213,7 +209,7 @@ function funcionProductos(){
 
         let productosBloque = $("<div></div>")
                             .addClass("productoCaja")
-                            .html(`<img class="productoImagen" src=${ubicacion}${producto.imagen} alt="Cotillon">
+                            .html(`<img class="productoImagen" src=${producto.imagen} alt="Cotillon">
 
                         <div class="margenTop3 productoInfo">
                             <h5>${producto.titulo}</h5>
