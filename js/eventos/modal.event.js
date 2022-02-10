@@ -147,7 +147,7 @@ function registroCarrito(){
     if(localStorage.getItem("usuario")){
 
         nodoModalCarrito.click(()=>{
-            $(location).attr('href','file:///D:/proyecto/html/compra.html');
+            $(location).attr('href','compra.html');
         })
 
     }else{

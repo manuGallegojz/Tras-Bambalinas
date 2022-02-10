@@ -58,7 +58,7 @@ function mostrarCarritoDesplegable(){
 
     let ubicacion;
 
-    window.location.href == "file:///D:/proyecto/index.html" ? ubicacion = "" : ubicacion = "../";
+    window.location.href == "../index.html" ? ubicacion = "" : ubicacion = "../";
 
     //funciones para productos y el total
 
@@ -196,7 +196,7 @@ function funcionProductos(){
 
     let ubicacion;
 
-    window.location.href == "file:///D:/proyecto/index.html" ? ubicacion = "" : ubicacion = "../";
+    window.location.href == "../index.html" ? ubicacion = "" : ubicacion = "../";
 
     let cantidadProductos;
     
