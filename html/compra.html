@@ -1,237 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tienda</title>
 
-    <!-----css----->
+        <!-----css----->
 
-    <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/style.css">
 
-    <!-----iconos----->
+        <!-----iconos----->
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <!-----jquery----->
+        <!-----jquery----->
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- jQuery Modal -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
-        defer />
+        <!-- jQuery Modal -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+            defer />
 
-    <!-----favicon----->
+        <!-----favicon----->
 
-    <link rel="icon" href="../images/logos/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../images/logos/favicon.ico" type="image/x-icon">
 
-</head>
-<body>
+    </head>
+    <body>
 
-    <img class="headerSecundarioImagen" src="../images/ilustraciones/header/headSecundario-37.svg" alt="Año Nuevo">
+        <img class="headerSecundarioImagen" src="../images/ilustraciones/header/headSecundario-37.svg" alt="Año Nuevo">
 
-    <header>
+        <header>
 
-        <a href="../index.html"><img class="headerLogotipo" src="../images/logos/logo.svg" alt="Logotipo"></a>
+            <a href="../index.html"><img class="headerLogotipo" src="../images/logos/logo.svg" alt="Logotipo"></a>
 
-        <nav>
+            <nav>
 
-            <ul class="flexRowBetween">
-                <a href="../html/tienda.html"><li class="blanco animacion_color cursor">Tienda</li></a>
-                    <li class="blanco animacion_color headerIcono">
-                <a href="../html/carrito.html">
-                        <div class="carritoIcono cursor">
-                            <i class="fas fa-shopping-cart blanco headerIcono"></i>
-                            <div class="circuloCarrito"></div>
-                        </div>
-                </a>
-                        <div class="headerCarritoDespegable margenTop4">
+                <ul class="flexRowBetween">
+                    <a href="../html/tienda.html"><li class="blanco animacion_color cursor">Tienda</li></a>
+                        <li class="blanco animacion_color headerIcono">
+                    <a href="../html/carrito.html">
+                            <div class="carritoIcono cursor">
+                                <i class="fas fa-shopping-cart blanco headerIcono"></i>
+                                <div class="circuloCarrito"></div>
+                            </div>
+                    </a>
+                            <div class="headerCarritoDespegable margenTop4">
 
-                            <div class="productosCarritoDesplegable">
+                                <div class="productosCarritoDesplegable">
+
+                                </div>
+
+                                <hr>
+
+                                <p class="margenTop4 totalCarritoDesplegable">Total:</p>
+
+                                <a href="../html/carrito.html"><button class="margenTop4 botonCarritoDesplegable">Ver carrito</button></a>
 
                             </div>
+                        </li>
+                    
+                    <li class="cursor">
 
-                            <hr>
+                        <div>
+                            <a href="#modal">
+                                <button class="headerBoton principal">
+                                    <i class="fas fa-user margenRight principal headerIcono"></i>
+                                </button>
+                            </a>
+                        </div> 
 
-                            <p class="margenTop4 totalCarritoDesplegable">Total:</p>
-
-                            <a href="../html/carrito.html"><button class="margenTop4 botonCarritoDesplegable">Ver carrito</button></a>
-
-                        </div>
                     </li>
-                
-                <li class="cursor">
+                    
+
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <section class="contenedor">
+            <h1>Compra Finalizada</h1>
+            <hr class="margenTop3">
+            <div class="flexCentrar padding">
+                <i class="fas fa-check secundario iconoCompra margenRight2"></i>
+                <h2 class="secundario">La compra se realizó con éxito</h2>  
+            </div>
+            <h1>Detalles del Pedido</h1>
+            <hr class="margenTop3">
+            <p class="margenTop3 numeroPedido"></p>
+            <h3>Productos</h3>
+            <div id="carrito"></div>
+            <a href="../index.html"><button class="margenTop3">Volver al inicio</button></a>
+        </section>
+
+        <!--Footer-->
+
+        <footer class="flexRowBetween">
+
+            <div class="footerBloqueUno centrar flexCentrar justifyCenter">
+
+                <a href="../index.html"><img class="footerLogotipo" src="images/logos/logo.svg" alt="Logotipo"></a>
+
+            </div>
+
+            <div class="footerBloqueDos flexColumnBetween centrar">
+
+                <div class="footerSeparacionBloqueDos">
 
                     <div>
-                        <a href="#modal">
-                            <button class="headerBoton principal">
-                                <i class="fas fa-user margenRight principal headerIcono"></i>
-                            </button>
-                        </a>
-                    </div> 
-
-                </li>
-                
-
-            </ul>
-
-        </nav>
-
-    </header>
-
-    <section class="contenedor">
-        <h1>Compra Finalizada</h1>
-        <hr class="margenTop3">
-        <div class="flexCentrar padding">
-            <i class="fas fa-check secundario iconoCompra margenRight2"></i>
-            <h2 class="secundario">La compra se realizó con éxito</h2>  
-        </div>
-        <h1>Detalles del Pedido</h1>
-        <hr class="margenTop3">
-        <p class="margenTop3 numeroPedido"></p>
-        <h3>Productos</h3>
-        <div id="carrito"></div>
-        <a href="../index.html"><button class="margenTop3">Volver al inicio</button></a>
-    </section>
-
-    <!--Footer-->
-
-    <footer class="flexRowBetween">
-
-        <div class="footerBloqueUno centrar flexCentrar justifyCenter">
-
-            <a href="../index.html"><img class="footerLogotipo" src="images/logos/logo.svg" alt="Logotipo"></a>
-
-        </div>
-
-        <div class="footerBloqueDos flexColumnBetween centrar">
-
-            <div class="footerSeparacionBloqueDos">
-
-                <div>
-                    <h5 class="blanco ">Navegación</h5>
-                    <ul>
-                        <a href="tienda.html"><li class="blanco">Tienda</li></a>
-                        <a href="carrito.html"><li class="blanco">Carrito</li></a>
-                    </ul>
-                </div>
-
-            </div>
-
-            <div>
-
-                <h5 class="blanco margenTop4">Redes Sociales</h5>
-
-                <div class="margenTop4">
-                    <img class="footerIcono margenRight" src="images/iconos/iconos-24.svg" alt="facebook">
-                    <img class="footerIcono margenRight" src="images/iconos/iconos-25.svg" alt="instagram">
-                    <img class="footerIcono margenRight" src="images/iconos/iconos-26.svg" alt="linkedin">
-                    <img class="footerIcono margenRight" src="images/iconos/iconos-27.svg" alt="pinterest">
-                </div>
-
-            </div>
-
-        </div>
-
-            <div class="footerSeparacionBloqueDos">
-
-                <div>
-                    <h5 class="blanco centrar">Encontranos</h5>
-                    <div class="margenTop4 flex justifyCenter">
-                        <img class="footerIconoDos margenRight centrar flexCentrar" src="images/iconos/iconos-20.svg" alt="">
-                        <p class="blanco">Av. Juan Bautista Alberdi 6040</p>
+                        <h5 class="blanco ">Navegación</h5>
+                        <ul>
+                            <a href="tienda.html"><li class="blanco">Tienda</li></a>
+                            <a href="carrito.html"><li class="blanco">Carrito</li></a>
+                        </ul>
                     </div>
-                    <iframe class="margenTop3 footerMapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13128.185317212932!2d-58.51295225855018!3d-34.653532887144515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9aa73d06447%3A0xcc2ea0fc9dc6e404!2sTras%20Bambalinas%20Cotill%C3%B3n!5e0!3m2!1ses!2sar!4v1642803451431!5m2!1ses!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                </div>
+
+                <div>
+
+                    <h5 class="blanco margenTop4">Redes Sociales</h5>
+
+                    <div class="margenTop4">
+                        <img class="footerIcono margenRight" src="images/iconos/iconos-24.svg" alt="facebook">
+                        <img class="footerIcono margenRight" src="images/iconos/iconos-25.svg" alt="instagram">
+                        <img class="footerIcono margenRight" src="images/iconos/iconos-26.svg" alt="linkedin">
+                        <img class="footerIcono margenRight" src="images/iconos/iconos-27.svg" alt="pinterest">
+                    </div>
+
                 </div>
 
             </div>
 
-    </footer>
+                <div class="footerSeparacionBloqueDos">
 
-    <!----------Modal----------->
+                    <div>
+                        <h5 class="blanco centrar">Encontranos</h5>
+                        <div class="margenTop4 flex justifyCenter">
+                            <img class="footerIconoDos margenRight centrar flexCentrar" src="images/iconos/iconos-20.svg" alt="">
+                            <p class="blanco">Av. Juan Bautista Alberdi 6040</p>
+                        </div>
+                        <iframe class="margenTop3 footerMapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13128.185317212932!2d-58.51295225855018!3d-34.653532887144515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9aa73d06447%3A0xcc2ea0fc9dc6e404!2sTras%20Bambalinas%20Cotill%C3%B3n!5e0!3m2!1ses!2sar!4v1642803451431!5m2!1ses!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
 
-    <div class="modal modalAnimacion1">
-        <h3>Iniciar Sesión</h3>
+                </div>
 
-        <form action="">
+        </footer>
 
-            <label for="mail"><p>Email:</p></label>
-            <input class="inputSesion margenTop4 valorEmail" type="text" name="mail">
-            <label class="margenTop2" for="clave"><p>Contraseña:</p></label>
-            <input class="inputSesion margenTop4 valorClave" type="password" name="clave">
-            <input class="enviarModal margenTop4" type="submit" value="Iniciar">
+        <!----------Modal----------->
 
-        </form>
+        <div class="modal modalAnimacion1">
+            <h3>Iniciar Sesión</h3>
 
-        <p class="botonRegistro">¿No tenés cuenta creada?</p>
+            <form action="">
 
-    </div>
+                <label for="mail"><p>Email:</p></label>
+                <input class="inputSesion margenTop4 valorEmail" type="text" name="mail">
+                <label class="margenTop2" for="clave"><p>Contraseña:</p></label>
+                <input class="inputSesion margenTop4 valorClave" type="password" name="clave">
+                <input class="enviarModal margenTop4" type="submit" value="Iniciar">
 
+            </form>
 
-    <div class="modal modalAnimacion2">
-        <h3>Registrarse</h3>
+            <p class="botonRegistro">¿No tenés cuenta creada?</p>
 
-            <label for="name"><p>Nombre:</p></label>
-            <input class="inputSesion margenTop4 nombreRegistro" type="text" name="name">
-
-            <label for="surname"><p>Apellido:</p></label>
-            <input class="inputSesion margenTop4 apellidoRegistro" type="text" name="surname">
-
-            <label for="mail"><p>Email:</p></label>
-            <input class="inputSesion margenTop4 emailRegistro" type="text" name="mail">
-
-            <label class="margenTop2" for="clave"><p>Contraseña:</p></label>
-            <input class="inputSesion margenTop4 claveRegistro" type="password" name="clave">
-
-            <input class="enviarModal registroBoton margenTop4" type="submit" value="Registrarse">
-            
         </div>
-    </div>
 
-    <div class="modal modalAnimacion3">
 
-        <button class="botonCerrarSesion margenTop4">Eliminar Cuenta</button>
+        <div class="modal modalAnimacion2">
+            <h3>Registrarse</h3>
 
-        <p class="margenTop4">¡Aviso! No podrás recuperar tu cuenta nuevamente!</p>
+                <label for="name"><p>Nombre:</p></label>
+                <input class="inputSesion margenTop4 nombreRegistro" type="text" name="name">
 
-    </div>
+                <label for="surname"><p>Apellido:</p></label>
+                <input class="inputSesion margenTop4 apellidoRegistro" type="text" name="surname">
 
-    <div class="modal modalAnimacion4">
+                <label for="mail"><p>Email:</p></label>
+                <input class="inputSesion margenTop4 emailRegistro" type="text" name="mail">
 
-        <h3>Cuenta Eliminada</h3>
+                <label class="margenTop2" for="clave"><p>Contraseña:</p></label>
+                <input class="inputSesion margenTop4 claveRegistro" type="password" name="clave">
 
-        <p>Presiona ESC para salir.</p>
+                <input class="enviarModal registroBoton margenTop4" type="submit" value="Registrarse">
+                
+            </div>
+        </div>
 
-    </div>
+        <div class="modal modalAnimacion3">
 
-    <!----------Scripts----------->
-    <!----------Clases----------->
+            <button class="botonCerrarSesion margenTop4">Eliminar Cuenta</button>
 
-    <script src="../js/clases/carrito.class.js"></script>
+            <p class="margenTop4">¡Aviso! No podrás recuperar tu cuenta nuevamente!</p>
 
-    <script src="../js/clases/producto.class.js"></script>
+        </div>
 
-    <script src="../js/clases/usuario.class.js"></script>
+        <div class="modal modalAnimacion4">
 
-    <!----------Datos----------->
+            <h3>Cuenta Eliminada</h3>
 
-    <script src="../js/datos/productos.data.js"></script>
+            <p>Presiona ESC para salir.</p>
 
-    <!----------Eventos----------->
+        </div>
 
-    <script src="../js/eventos/modal.event.js"></script>
+        <!----------Scripts----------->
+        <!----------Clases----------->
 
-    <!----------Paginas----------->
+        <script src="../js/clases/carrito.class.js"></script>
 
-    <script src="../js/paginas/carrito.js"></script>
+        <script src="../js/clases/producto.class.js"></script>
 
-    <script src="../js/paginas/compra.js"></script>
+        <script src="../js/clases/usuario.class.js"></script>
 
-    <!----------Index----------->
+        <!----------Datos----------->
 
-    <script src="../js/index.js"></script>
+        <script src="../js/datos/productos.data.js"></script>
 
-</body>
+        <!----------Eventos----------->
+
+        <script src="../js/eventos/modal.event.js"></script>
+
+        <!----------Paginas----------->
+
+        <script src="../js/paginas/carrito.js"></script>
+
+        <script src="../js/paginas/compra.js"></script>
+
+        <!----------Index----------->
+
+        <script src="../js/index.js"></script>
+
+    </body>
 </html>

@@ -5,7 +5,7 @@ $(function()
 
     filtroCategorias();
 
-    //Filtro por precio
+    //Filtros
 
     filtroOrden();
 
@@ -13,13 +13,15 @@ $(function()
 
     funcionColores();
 
-    //Limpiar_filtros
+    //limpiarFiltros
 
     limpiarFiltros();
 });
 
 const elementoFiltros = $(".filtros")
                         .html("<h2>Filtros</h2>");
+
+//Constructor para el titulo y mostrar los elementos para filtrar
 
 function constructorFiltros(titulo, filtros){
 
@@ -31,6 +33,8 @@ function constructorFiltros(titulo, filtros){
     elementoFiltros.append(elementoConstructor);
 
 }
+
+//Filtrar por categorias
 
 function filtroCategorias(){
 
@@ -50,6 +54,7 @@ function filtroCategorias(){
 
 }
 
+//Filtrar por dierentes aspectos
 
 function filtroOrden(){
 
@@ -58,7 +63,7 @@ function filtroOrden(){
         let itemOrden = $("<ul></ul>")
                                 .addClass("orden");
 
-                            let hola2 = $("<li></li>")
+                            let var1 = $("<li></li>")
                             .addClass("listaOrden")
                             .html("Ordenar por precio")
                             .click(()=>{
@@ -75,9 +80,9 @@ function filtroOrden(){
                                 mostrarProductos("", variableOrden)
                             });
 
-                            itemOrden.append(hola2[0]);
+                            itemOrden.append(var1[0]);
 
-                            let hola3 = $("<li></li>")
+                            let var2 = $("<li></li>")
                             .addClass("listaOrden")
                             .html("Ordenar por stock")
                             .click(()=>{
@@ -94,9 +99,9 @@ function filtroOrden(){
                                 mostrarProductos("", variableOrden)
                             });
 
-                            itemOrden.append(hola3[0]);
+                            itemOrden.append(var2[0]);
 
-                            let hola4 = $("<li></li>")
+                            let var3 = $("<li></li>")
                             .addClass("listaOrden")
                             .html("Ordenar por relevancia")
                             .click(()=>{
@@ -113,7 +118,7 @@ function filtroOrden(){
                                 mostrarProductos("", variableOrden)
                             });
 
-                            itemOrden.append(hola4[0]);
+                            itemOrden.append(var3[0]);
 
                                 listaOrden.append(itemOrden);
 
@@ -123,7 +128,7 @@ function filtroOrden(){
 
 }
 
-
+//Filtrar por dierentes colores
 
 function funcionColores(){
 
@@ -147,6 +152,8 @@ function funcionColores(){
 
     $(elementoFiltros).append(elementoColores)
 }
+
+//Limpiar los filtros
 
 function limpiarFiltros(){
 

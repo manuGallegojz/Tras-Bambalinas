@@ -1,12 +1,14 @@
 $( document ).ready(function() {
 
-    registro();
+    ingreso();
 
     registroCarrito()
 
 });
 
-function registro(){
+//Ingreso del usuario
+
+function ingreso(){
 
     if(localStorage.getItem("usuario")){
 
@@ -29,6 +31,8 @@ function registro(){
     }
 
 }
+
+//Registro
 
 function registroUsuario(){
 
@@ -53,6 +57,8 @@ function registroUsuario(){
 
 }
 
+//Mostrar los modales correspondientes
+
 function mostrarModal(ubicacionBoton){
     
     let boton = ubicacionBoton;
@@ -72,6 +78,8 @@ function mostrarModal(ubicacionBoton){
     })
 
 }
+
+//Cierre de los modales
 
 function cerrarModal(){
     
@@ -102,6 +110,8 @@ function cerrarModal(){
 
 }
 
+//Dependiendo de si está logueado, se muestra el nombre o no.
+
 function botonSesion(estado){
 
     $(".headerBoton").html("");
@@ -109,30 +119,6 @@ function botonSesion(estado){
     estadoMayuscula = estado.charAt(0).toUpperCase() + estado.slice(1);
 
     $(".headerBoton").append(estadoMayuscula);
-
-}
-
-function inicioSesion(){
-
-    let valorEmail = $(".valorEmail").val();
-
-    let valorClave = $(".valorClave").val();
-
-    const usuarioObjeto = JSON.parse(localStorage.getItem("usuario"));
-
-    if(valorEmail === usuarioObjeto.email && valorClave === usuarioObjeto.clave)
-    {
-        cerrarModal();
-
-        const usuarioObjeto = JSON.parse(localStorage.getItem("usuario"));
-
-        botonSesion(usuarioObjeto.nombre);
-
-    }else {
-
-        $(".modalAnimacion1").append(`<p>El email o contraseña no son correctos</p>`)
-
-    }
 
 }
 

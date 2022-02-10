@@ -20,11 +20,9 @@ function animaciones(){
 
 const carritoCompras = new carrito([], {});
 
+//Carrito de la página
+
 function funcionCarrito(){
-
-    //cantidad de productos en el carrito
-
-    //localStorage.getItem("usuario") ? $(".circuloCarrito").html(localStorage.length-1) : $(".circuloCarrito").html(localStorage.length);
 
     //animacion en el carrito desplegable
 
@@ -52,13 +50,15 @@ function funcionCarrito(){
 
 }
 
+//Carrito desplegable de la página
+
 function mostrarCarritoDesplegable(){
 
     //ubicacion para las imagenes del carrito
 
     let ubicacion;
 
-    window.location.href == "../index.html" ? ubicacion = "" : ubicacion = "../";
+    window.location.href == "https://manugallegojz.github.io/Tras-Bambalinas/" ? ubicacion = "" : ubicacion = "../";
 
     //funciones para productos y el total
 
@@ -67,6 +67,8 @@ function mostrarCarritoDesplegable(){
     localStorage.getItem("usuario") ? funcionTotalCarritoDesplegable(1) : funcionTotalCarritoDesplegable(0);
                         
 }
+
+//productos en el carrito desplegable
 
 function productosCarritoDespegable(numero, ubicacion){
 
@@ -122,6 +124,8 @@ function productosCarritoDespegable(numero, ubicacion){
 
 }
 
+//Total de precios
+
 function funcionTotalCarritoDesplegable(numero){
 
     let suma = 0;
@@ -136,6 +140,8 @@ function funcionTotalCarritoDesplegable(numero){
 
     $(".totalCarritoDesplegable").html(`Total: $${suma}`);
 };
+
+//Scroll
 
 function funcionScroll(){
     
@@ -160,6 +166,8 @@ $(document).ready(function() {
     });
     });
 }
+
+//Seccion de Categorías
 
 function funcionCategorias(){
 
@@ -190,7 +198,7 @@ function funcionCategorias(){
 
 }
 
-
+//Seccion de productos
 
 function funcionProductos(){
 
@@ -214,7 +222,6 @@ function funcionProductos(){
                         <div class="margenTop3 productoInfo">
                             <h5>${producto.titulo}</h5>
                         
-
                             <p class="margenTop4">$${producto.precio}</p>
 
                         </div>`);
@@ -239,6 +246,8 @@ function funcionProductos(){
     }
 
 }
+
+//Sección Destacados
 
 function destacados(){
 
